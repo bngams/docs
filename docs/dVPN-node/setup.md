@@ -12,6 +12,8 @@ Minimum machine configuration required
 
 ## Install Docker
 
+:light-bulb: To install Docker engine you can refer to its [official documentation](https://docs.docker.com/engine/install/). You can find various ways to install it and specific instructions according to your OS / distrib. For instance, if you want to [install Docker engine on Debian](https://docs.docker.com/engine/install/debian/) or Ubuntu, you can setup official docker's repositories to get it from your package manager (easier to update for the nex).
+
 1. Update the list of available software packages
 
     ``` sh
