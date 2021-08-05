@@ -155,6 +155,17 @@ Minimum machine configuration required
     
 ## Install Wireguard (Debian)
 
+Error while running docker image 
+
+```
+[#] ip link add wg0 type wireguard
+RTNETLINK answers: Not supported
+Unable to access interface: Protocol not supported
+[#] ip link delete dev wg0
+Cannot find device "wg0"
+Error: exit status 1
+```
+
 In order to run the docker image propperly on debian you have to install wireguard.  for Debian 10.
 
 ``` sh
@@ -163,7 +174,7 @@ sudo apt update
 sudo apt install wireguard
 ```
 
-If the error persist you can install linux headers to make wireguard work
+If the error persist or if you have the error msg "RTNETLINK answers: Not supported" you can install linux headers to make wireguard work
 
 ``` sh
 apt-get install wireguard-dkms wireguard-tools linux-headers-$(uname -r)
