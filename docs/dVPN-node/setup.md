@@ -155,7 +155,7 @@ Minimum machine configuration required
     
 ## Install Wireguard (Debian)
 
-In order to run the docker image propperly on debian you have to install wireguard. Sample here for Debian 10.
+In order to run the docker image propperly on debian you have to install wireguard.  for Debian 10.
 
 ``` sh
 echo 'deb http://ftp.debian.org/debian buster-backports main' | sudo tee /etc/apt/sources.list.d/buster-backports.list
@@ -163,3 +163,8 @@ sudo apt update
 sudo apt install wireguard
 ```
 
+If the error persist you can install linux headers to make wireguard work
+
+``` sh
+apt-get install wireguard-dkms wireguard-tools linux-headers-$(uname -r)
+```
